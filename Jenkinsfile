@@ -57,7 +57,7 @@ pipeline {
                         export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
                         export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
                         export AWS_REGION=us-east-2
-                        aws eks --region $AWS_REGION update-kubeconfig --name exam
+                        aws eks --region $AWS_REGION update-kubeconfig --name examninja
                         '''
                         dir('deployTestBackEnd') {
                             git branch: 'master', url: 'https://github.com/WSMaan/deployTestBackEnd.git', credentialsId: 'GIT_HUB'
